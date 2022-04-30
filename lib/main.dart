@@ -52,6 +52,9 @@ class _HomeState extends State<Home> {
     ChoiceItem(text: "Twitch"),
     ChoiceItem(text: "Netflix"),
     ChoiceItem(text: "lecture"),
+    ChoiceItem(text: "comics", isEnabled: false,),
+    ChoiceItem(text: "Flutter"),
+    ChoiceItem(text: "Stephen King", isEnabled: false,),
     ChoiceItem(text: "hexakosioihexekontahexaphobique")
   ];
 
@@ -76,7 +79,7 @@ class _HomeState extends State<Home> {
             choicesSelected: _choicesSelected,
           ),
           Footer(
-            choices: _choices,
+            choices: _choices.where((item) => item.isEnabled).toList(),
           )
         ],
       ),

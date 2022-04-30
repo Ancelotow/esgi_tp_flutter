@@ -11,7 +11,7 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        color: Colors.white,
+          color: Colors.white,
           width: double.infinity,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
