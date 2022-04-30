@@ -23,7 +23,9 @@ class Header extends StatelessWidget {
                 "Vos choix :",
                 style: Theme.of(context).textTheme.headline1,
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               getBody(context)
             ],
           ),
@@ -46,5 +48,4 @@ class Header extends StatelessWidget {
       children: choicesSelected,
     );
   }
-
 }

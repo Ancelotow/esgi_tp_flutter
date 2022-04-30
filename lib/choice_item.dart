@@ -39,10 +39,10 @@ class _ChoiceItemState extends State<ChoiceItem> {
     );
   }
 
-  Color getColor(){
+  Color? getColor(){
     if(widget.isSelected && widget.isEnabled) {
       return Colors.amber;
     }
-    return Colors.grey;
+    return Colors.grey[300];
   }
 }
