@@ -11,23 +11,26 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Container(
-          width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Vos choix :",
-                style: Theme.of(context).textTheme.headline1,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              getBody(context)
-            ],
+      child: Container(
+        width: double.infinity,
+        color: Colors.deepPurpleAccent,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Vos choix :",
+                  style: Theme.of(context).textTheme.headline1,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                getBody(context)
+              ],
+            ),
           ),
         ),
       ),

@@ -7,7 +7,11 @@ class ChoiceItem extends StatefulWidget {
   Function()? onTap;
 
   ChoiceItem(
-      {Key? key, required this.text, this.isSelected = false, this.onTap, this.isEnabled = true})
+      {Key? key,
+      required this.text,
+      this.isSelected = false,
+      this.onTap,
+      this.isEnabled = true})
       : super(key: key);
 
   @override
@@ -19,7 +23,7 @@ class _ChoiceItemState extends State<ChoiceItem> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if(widget.isEnabled) {
+        if (widget.isEnabled) {
           setState(() {
             widget.isSelected = !widget.isSelected;
           });
@@ -39,8 +43,8 @@ class _ChoiceItemState extends State<ChoiceItem> {
     );
   }
 
-  Color? getColor(){
-    if(widget.isSelected && widget.isEnabled) {
+  Color? getColor() {
+    if (widget.isSelected && widget.isEnabled) {
       return Colors.amber;
     }
     return Colors.grey[300];

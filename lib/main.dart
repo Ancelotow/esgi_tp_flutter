@@ -70,18 +70,15 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     _choices.forEach((element) => element.onTap = _onTapChoice);
     return Scaffold(
-      backgroundColor: Colors.deepPurpleAccent,
-      body: SafeArea(
-        child: Column(
-          children: [
-            Header(
-              choicesSelected: _choicesSelected,
-            ),
-            Footer(
-              choices: _choices,
-            )
-          ],
-        ),
+      body: Column(
+        children: [
+          Header(
+            choicesSelected: _choicesSelected,
+          ),
+          Footer(
+            choices: _choices,
+          )
+        ],
       ),
     );
   }
